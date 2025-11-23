@@ -8,12 +8,8 @@
 <style>
   :root{
     --appbar:#333333;
-
-    /* EXACT colours from screenshot */
     --grad-start:#CD5B45;   /* left dark coral */
-  --grad-end:#FEC97D;     /* right light orange-yellow */
-
-
+    --grad-end:#FEC97D;     /* right light orange-yellow */
     --text:#222222;
   }
 
@@ -23,7 +19,6 @@
     padding:0;
   }
 
-  /* Remove unwanted scrolling */
   html, body{
     overflow-x:hidden;
   }
@@ -37,7 +32,7 @@
   /* ---------- TOP BAR ---------- */
   .topbar{
     width:100%;
-    height:55px; /* reduced height */
+    height:55px;
     background:var(--appbar);
     color:#fff;
     display:flex;
@@ -104,7 +99,7 @@
 
   .profile-pic{
     width:120px;
-    height:100px;
+    height:120px;
     border-radius:12px;
     object-fit:cover;
     margin-bottom:12px;
@@ -133,7 +128,7 @@
   .instruction{
     text-align:center;
     margin:28px 6px 20px;
-    font-size:32px;
+    font-size:28px;
     line-height:1.4;
   }
 
@@ -142,13 +137,17 @@
     display:grid;
     grid-template-columns:repeat(2,1fr);
     gap:24px;
-    margin:0 96px;
+    margin:0 0 0 48px;  /* your current left offset */
+    width:60%;
+    height:10%    
   }
 
   .meal-grid.single-row{
     grid-template-columns:1fr;
-    margin-top:16px;
-  }
+    width:30%;
+    margin:16px 0 0 48px;  /* SAME left margin as top */
+}
+
 
   .meal-btn{
     border:none;
@@ -159,15 +158,16 @@
     font-size:17px;
     font-weight:600;
     box-shadow:0 6px 14px rgba(0,0,0,0.22);
+
     display:flex;
     align-items:center;
-    justify-content:space-between;
-    cursor:pointer;
+    justify-content:flex-start;  /* text & arrow stay together */
+    gap:8px;                     /* small gap between text & arrow */
   }
 
   .meal-arrow{
     font-size:18px;
-    margin-left:8px;
+    margin-left:0;
   }
 </style>
 </head>
