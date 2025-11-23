@@ -103,40 +103,45 @@
     line-height:1.4;
   }
 
-  /* ---------- MEAL BUTTONS ---------- */
-  .meal-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:24px;
-    margin:0 0 0 48px;
-    width:60%;
-  }
+ /* ---------- MEAL BUTTONS (Perfect Match) ---------- */
 
-  .meal-grid.single-row{
-    grid-template-columns:1fr;
-    width:60%;
-    margin:16px 0 0 48px;
-  }
+.meal-section{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:22px;
+    margin-top:20px;
+}
 
-  .meal-btn{
+.meal-row{
+    display:flex;
+    gap:28px;
+}
+
+.meal-btn{
+    width:165px;
+    height:70px;
     border:none;
-    border-radius:10px;
-    padding:12px 10px;
-    background:linear-gradient(135deg, var(--grad-start), var(--grad-end));
-    color:#333;
-    font-size:17px;
+    border-radius:14px;
+    background:linear-gradient(90deg, #E57A52, #FEC97D);
+    color:#222;
+    font-size:20px;
     font-weight:600;
-    box-shadow:0 6px 14px rgba(0,0,0,0.22);
 
     display:flex;
     align-items:center;
-    justify-content:center;   /* center text + arrow together */
+    justify-content:center;
     gap:12px;
-  }
 
-  .meal-arrow{
-    font-size:22px;
-  }
+    box-shadow:0 10px 16px rgba(0,0,0,0.28);
+    cursor:pointer;
+}
+
+.meal-arrow{
+    font-size:26px;
+    font-weight:600;
+    margin-left:4px;
+}
 </style>
 </head>
 
@@ -162,26 +167,27 @@
         <img src="top-card.jpg" class="full-ss" alt="Mess coupon card">
       </section>
 
-      <p class="instruction">
-        Tap on the meal name to<br>scan and avail food.
-      </p>
+            <p class="instruction">
+  Tap on the meal name to<br>scan and avail food.
+</p>
 
-      <div class="meal-grid">
+<div class="meal-section">
+
+    <div class="meal-row">
         <button class="meal-btn">
-          <span>Breakfast</span><span class="meal-arrow">&#8594;</span>
+            <span>BreakFast</span><span class="meal-arrow">&#8594;</span>
         </button>
 
         <button class="meal-btn">
-          <span>Lunch</span><span class="meal-arrow">&#8594;</span>
+            <span>Lunch</span><span class="meal-arrow">&#8594;</span>
         </button>
-      </div>
+    </div>
 
-      <div class="meal-grid single-row">
+    <div class="meal-row">
         <button class="meal-btn">
-          <span>Dinner</span><span class="meal-arrow">&#8594;</span>
+            <span>Dinner</span><span class="meal-arrow">&#8594;</span>
         </button>
-      </div>
-
+    </div>
     </div>
   </main>
 
