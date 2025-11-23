@@ -1,6 +1,25 @@
 <!doctype html>
 <html lang="en">
 <head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mess Coupon</title>
+
+  <!-- Make it behave like an app -->
+  <meta name="theme-color" content="#333333">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <!-- Link the manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- your <style> … comes below this -->
+  <style>
+    /* your existing CSS here */
+  </style>
+
+
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Mess Coupon</title>
@@ -190,6 +209,13 @@
     </div>
     </div>
   </main>
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js")
+      .catch(err => console.log("SW registration failed", err));
+  }
+</script>
+
 
 </body>
 </html>
