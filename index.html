@@ -70,7 +70,7 @@
     opacity:0.9;
   }
 
-  /* Wrapper */
+  /* ---------- PAGE WRAP ---------- */
   .page-wrap{
     display:flex;
     justify-content:center;
@@ -82,53 +82,24 @@
     max-width:480px;
   }
 
-  /* ---------- GRADIENT INFO CARD ---------- */
+  /* ---------- TOP SCREENSHOT CARD ---------- */
   .info-card{
-    background:linear-gradient(90deg, var(--grad-start), var(--grad-end));
     border-radius:10px;
-    padding:20px 18px 26px;
     box-shadow:0 4px 12px rgba(0,0,0,0.18);
+    overflow:hidden;           /* follow screenshot rounded corners */
+    margin-bottom:26px;
   }
 
-  .info-card-top{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    margin-bottom:18px;
-  }
-
-  .profile-pic{
-    width:120px;
-    height:120px;
-    border-radius:12px;
-    object-fit:cover;
-    margin-bottom:12px;
-  }
-
-  .student-name{
-    font-size:18px;
-    font-weight:500;
-  }
-
-  .info-row{
-    margin-top:16px;
-    font-size:15px;
-    line-height:1.4;
-  }
-
-  .info-label{
-    font-weight:600;
-  }
-
-  .info-value{
+  .full-ss{
+    width:100%;
     display:block;
-    margin-top:3px;
   }
 
+  /* ---------- INSTRUCTION TEXT ---------- */
   .instruction{
     text-align:center;
-    margin:28px 6px 20px;
-    font-size:28px;
+    margin:10px 6px 20px;
+    font-size:20px;
     line-height:1.4;
   }
 
@@ -137,17 +108,15 @@
     display:grid;
     grid-template-columns:repeat(2,1fr);
     gap:24px;
-    margin:0 0 0 48px;  /* your current left offset */
+    margin:0 0 0 48px;
     width:60%;
-    height:10%    
   }
 
   .meal-grid.single-row{
     grid-template-columns:1fr;
-    width:30%;
-    margin:16px 0 0 48px;  /* SAME left margin as top */
-}
-
+    width:60%;
+    margin:16px 0 0 48px;
+  }
 
   .meal-btn{
     border:none;
@@ -161,13 +130,12 @@
 
     display:flex;
     align-items:center;
-    justify-content:flex-start;  /* text & arrow stay together */
-    gap:8px;                     /* small gap between text & arrow */
+    justify-content:center;   /* center text + arrow together */
+    gap:12px;
   }
 
   .meal-arrow{
-    font-size:18px;
-    margin-left:0;
+    font-size:22px;
   }
 </style>
 </head>
@@ -188,35 +156,10 @@
   <main class="page-wrap">
     <div class="page-inner">
 
+      <!-- YOUR SCREENSHOT CARD -->
       <section class="info-card">
-        <div class="info-card-top">
-          <img src="profile.jpg" class="profile-pic">
-          <div class="student-name">Cheruku Sai Kumar</div>
-        </div>
-
-        <div class="info-row">
-          <span class="info-label">Father's Name</span>
-          <span class="info-value">Cheruku Rajaiah (9618429837)</span>
-        </div>
-
-        <div class="info-row">
-          <span class="info-label">Mother's Name</span>
-          <span class="info-value">Cheruku Laxmi (919618429837)</span>
-        </div>
-
-        <div class="info-row">
-          <span class="info-label">Program Name</span>
-          <span class="info-value">
-            P132: B.Tech. (Computer Science and Engineering)(2023)
-          </span>
-        </div>
-
-        <div class="info-row">
-          <span class="info-label">Hostel</span>
-          <span class="info-value">
-            Boys Hostel-04- D704-Bed D (Std Non-AC 4 Seater)
-          </span>
-        </div>
+        <!-- change top-card.jpg to your actual file name -->
+        <img src="top-card.jpg" class="full-ss" alt="Mess coupon card">
       </section>
 
       <p class="instruction">
